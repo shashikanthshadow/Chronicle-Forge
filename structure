@@ -1,0 +1,13 @@
+creative-storyteller/
+├── backend/
+│   ├── main.py             # FastAPI application
+│   ├── story_manager.py    # Local file I/O for chapters and summaries
+│   └── requirements.txt    # Python dependencies
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── stories/
+│   └── chapter_1_the_beginning.txt  # A folder to store all your story files
+├── .env                  # Environment variables (API keys)
+└── .gitignore            # Files to ignore in Git

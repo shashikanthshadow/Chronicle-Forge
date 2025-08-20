@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chronicle Forge</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer src="/static/script.js"></script>
+</head>
+
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">✦</span>
+      <span>Chronicle Forge</span>
+    </div>
+    <div class="actions">
+      <button id="toggle-view" class="chip">Story View</button>
+      <button id="new-section" class="primary">New Section</button>
+      <!-- ✅ New export buttons -->
+      <button id="download-docx" class="chip" disabled>Download DOCX</button>
+      <button id="download-pdf" class="chip" disabled>Download PDF</button>
+    </div>
+  </header>
+
+  <!-- App layout -->
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="side-title">SECTIONS</div>
+      <div id="section-list" class="section-list"></div>
+    </aside>
+
+    <!-- Main workspace -->
+    <main class="workspace">
+      <!-- Story pane (scrollable) -->
+      <section id="story-pane" class="pane">
+        <h1 id="section-title" class="doc-title">Select or create a section</h1>
+        <div id="story-content" class="story-scroll"></div>
+      </section>
+
+      <!-- Chat pane (input pinned bottom, history scrollable) -->
+      <section id="chat-pane" class="pane hidden">
+        <div id="chat-history" class="chat-scroll"></div>
+
+        <form id="chat-form" class="composer" autocomplete="off">
+          <textarea id="chat-input" rows="1" placeholder="Write a prompt… (Shift+Enter for newline)"></textarea>
+          <button id="send-btn" type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <!-- Spinner -->
+  <div id="spinner" class="spinner spinner-hidden"></div>
+</body>
+</html>
