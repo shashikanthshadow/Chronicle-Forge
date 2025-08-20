@@ -34,4 +34,86 @@ Here’s Chronicle Forge in action:
 ---
 
 ## 📂 Project Structure
+``` bash
+creative-storyteller/
+├── backend/
+│ ├── main.py # FastAPI app
+│ ├── story_manager.py # File operations for story storage
+│ └── requirements.txt # Python dependencies
+├── frontend/
+│ ├── index.html # UI entry point
+│ ├── style.css # UI styling
+│ └── script.js # UI logic
+├── stories/ # Folder for saved story files
+│ └── example.txt
+├── assets/
+│ └── demo.gif # Demo animation
+├── .env # API key configuration
+└── README.md # Documentation
+```
+
+
+
+## ⚡ Installation
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/yourusername/chronicle-forge.git
+cd chronicle-forge
+```
+
+### 2️⃣ Backend setup
+
+Install dependencies:
+``` bash
+cd backend
+pip install -r requirements.txt
+```
+ Set up your .env file:
+
+``` bash
+GEMINI_API_KEY=your_api_key_here
+```
+ Run the FastAPI server:
+``` bash
+uvicorn main:app --reload
+```
+
+ This starts the backend at:
+👉 http://127.0.0.1:8000
+
+### 3️⃣ Frontend setup
+
+ No build system required — just open the frontend:
+```env
+http://127.0.0.1:8000
+```
+
+## The backend automatically serves the frontend files.
+
+## 🚀 Usage
+
+1. Open the app in your browser.  
+2. Create a new **Section** (like “Chapter 1”).  
+3. Use **Chat View** to provide prompts to the AI.  
+   - Example: *“Introduce a mysterious character entering the scene.”*  
+4. Switch to **Story View** to read the compiled narrative.  
+5. Delete sections when you no longer need them.
+
+## ⚙️ API Endpoints
+
+| Method | Endpoint                        | Description                  |
+|--------|---------------------------------|------------------------------|
+| GET    | `/sections`                     | Get list of sections         |
+| POST   | `/start_new_section/`           | Create a new section         |
+| GET    | `/get_section_content/{name}`   | Get section content          |
+| DELETE | `/delete_section/{name}`        | Delete a section             |
+| POST   | `/generate_next_part/`          | Generate next story segment  |
+
+
+## 🧑‍💻 Development Notes
+
+- Frontend **chat history** is stored in `localStorage` per section.  
+- Backend **story text** is saved as `.txt` files inside `/stories/`.  
+- **Story View** and **Chat View** toggle is controlled via a single button in the top bar.  
 
