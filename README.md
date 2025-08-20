@@ -20,7 +20,7 @@ It lets you create story sections, chat with an AI to extend them, and view your
 
 Here’s Chronicle Forge in action:  
 
-![Chronicle Forge](https://github.com/shashikanthshadow/Chronicle-Forge/raw/main/assets/demo_readme.gif)
+![Chronicle Forge](https://github.com/shashikanthshadow/Chronicle-Forge/raw/main/assets/demo.gif)
 
 
 ---
