@@ -59,7 +59,7 @@ creative-storyteller/
 
 ### 1️⃣ Clone the repo
 ```bash
-git clone https://github.com/yourusername/chronicle-forge.git
+git clone https://github.com/shashikanthshadow/Chronicle-Forge.git
 cd chronicle-forge
 ```
 
